@@ -1,0 +1,13 @@
+﻿__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+.git
+.gitignore
+.agents
+.claude
+docs/*.pdf
+docs/*.docx
+docs/*.doc
+docs/*.epub

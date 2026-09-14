@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STIFIn – Penilaian Diri Psikologis</title>
+  <meta name="description" content="Kenali tipe kepribadian STIFIn Anda melalui kuesioner interaktif berbasis AI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <!-- Background orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <main class="container">
+    <!-- Hero -->
+    <header class="hero" id="hero-section">
+      <div class="badge">🧠 STIFIn Personality Test</div>
+      <h1>Temukan Kepribadian <span class="gradient-text">Sejati Anda</span></h1>
+      <p class="subtitle">
+        Jawab 10 pertanyaan singkat dan pilih simbol geometri yang mencerminkan diri Anda.
+        AI kami akan menganalisis hasilnya secara instan.
+      </p>
+    </header>
+
+    <!-- Form Data Responden -->
+    <section class="card glass" id="card-responden">
+      <h2 class="section-title">👤 Data Responden</h2>
+      <p class="section-desc">Mohon lengkapi identitas Anda sebelum memulai tes.</p>
+
+      <div class="form-group-wrap">
+        <div class="form-field">
+          <label class="field-label" for="input-nama">Nama Lengkap</label>
+          <input
+            type="text"
+            id="input-nama"
+            class="text-input"
+            placeholder="Masukkan nama lengkap Anda…"
+            autocomplete="name"
+            required
+          />
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-field">
+            <label class="field-label" for="input-nim">NIM (Nomor Induk Mahasiswa)</label>
+            <input
+              type="text"
+              id="input-nim"
+              class="text-input"
+              placeholder="Masukkan NIM Anda…"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="form-field">
+            <label class="field-label" for="input-email">Email Aktif</label>
+            <input
+              type="email"
+              id="input-email"
+              class="text-input"
+              placeholder="nama@email.com"
+              autocomplete="email"
+              required
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kuesioner 10 Pertanyaan -->
+    <section class="card glass" id="card-kuesioner">
+      <h2 class="section-title">📋 Bagian 1 – Pertanyaan Kepribadian</h2>
+      <p class="section-desc">Pilih <strong>Setuju</strong>, <strong>Ragu-ragu</strong>, atau <strong>Tidak Setuju</strong> sesuai dengan kecenderungan diri Anda.</p>
+
+      <div id="questions-wrapper">
+        <!-- Digenerate oleh JavaScript -->
+      </div>
+
+      <!-- Progress -->
+      <div class="progress-wrapper">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <span class="progress-label" id="progress-label">0 / 10 dijawab</span>
+      </div>
+    </section>
+
+    <!-- Bagian Geometri -->
+    <section class="card glass" id="card-geometri">
+      <h2 class="section-title">🔷 Bagian 2 – Pilih Simbol Geometri</h2>
+      <p class="section-desc">
+        Perhatikan setiap simbol geometri yang muncul bergantian (looping 3 detik). 
+        <strong>Klik pada simbol</strong> ketika Anda merasa cocok dengan bentuk tersebut.
+      </p>
+
+      <div class="geo-showcase-container">
+        <!-- Showcase Focus Card -->
+        <div class="geo-focus-card" id="geo-focus-card" onclick="pilihGeoCurrent()" role="button" tabindex="0" title="Klik untuk memilih simbol ini">
+          <!-- Countdown bar indicator (3 detik) -->
+          <div class="geo-timer-track">
+            <div class="geo-timer-bar" id="geo-timer-bar"></div>
+          </div>
+
+          <div class="geo-focus-img-wrap" id="geo-focus-img-wrap">
+            <img id="geo-focus-img" src="/static/images/sensing.png" alt="Sensing" class="geo-focus-img" />
+          </div>
+
+          <div class="geo-focus-label" id="geo-focus-label">Sensing</div>
+
+          <div class="geo-focus-status" id="geo-focus-status">
+            <span class="status-hint">👆 Klik untuk Memilih Simbol Ini</span>
+          </div>
+        </div>
+
+        <!-- Controls: Prev, Dots, Next -->
+        <div class="geo-nav-controls">
+          <button type="button" class="btn-geo-arrow" onclick="prevGeo()" aria-label="Simbol Sebelumnya">‹</button>
+          <div class="geo-dot-indicators" id="geo-dot-indicators"></div>
+          <button type="button" class="btn-geo-arrow" onclick="nextGeo()" aria-label="Simbol Berikutnya">›</button>
+        </div>
+
+        <!-- Feedback badge bila sudah memilih -->
+        <div class="geo-choice-summary" id="geo-choice-summary" style="display: none;">
+          <span class="choice-icon">✓</span>
+          <span class="choice-text" id="geo-choice-text">Simbol Terpilih: Sensing</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tombol Submit -->
+    <div class="submit-wrapper">
+      <button class="btn-submit" id="btn-submit" onclick="submitKuesioner()">
+        <span class="btn-text">✨ Lihat Hasil Analisis</span>
+        <span class="btn-loader hidden">⏳</span>
+      </button>
+    </div>
+  </main>
+
+  <script src="/static/js/kuesioner.js"></script>
+</body>
+</html>

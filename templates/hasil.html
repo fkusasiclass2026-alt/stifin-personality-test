@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STIFIn – Hasil Penilaian Diri</title>
+  <meta name="description" content="Hasil analisis kepribadian Introvert, Ekstrovert, atau Ambivert dari tes STIFIn Anda." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <!-- Background orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <main class="container container-hasil">
+
+    <!-- ─── Ringkasan Profil Responden ─── -->
+    <section class="card glass hasil-header-card" id="section-header">
+      <div class="header-profile-wrap">
+        <div class="header-badge-stifin" id="header-tipe-singkat">—</div>
+        <div class="header-user-info">
+          <h1 id="hasil-nama" class="hasil-nama-title">Halo, Responden!</h1>
+          <div id="hasil-identitas" class="hasil-identitas"></div>
+        </div>
+        <div class="header-type-pill">
+          <span class="pill-prefix">Tipe Kepribadian STIFIn:</span>
+          <span id="hasil-tipe-gabungan" class="pill-tipe-main">—</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Duo Grid: Analisis Kemudi & Mesin Berpikir Bersebelahan ─── -->
+    <div class="hasil-grid-duo">
+      <!-- Kartu Kiri: Kemudi Introvert / Ekstrovert -->
+      <section class="card glass card-duo" id="card-kemudi">
+        <div class="card-duo-header">
+          <span class="card-duo-tag">🧭 Kemudi Kecerdasan</span>
+          <div class="hasil-icon-mini" id="hasil-icon">🧠</div>
+        </div>
+        <h2 id="hasil-tipe" class="duo-title gradient-text">—</h2>
+        <p id="hasil-deskripsi" class="duo-desc"></p>
+
+        <!-- Score Bar Dual -->
+        <div class="score-wrapper">
+          <div class="score-row">
+            <span class="score-label introvert-label">Introvert</span>
+            <div class="dual-bar">
+              <div class="bar-fill bar-introvert" id="bar-i"></div>
+              <div class="bar-fill bar-extrovert" id="bar-e"></div>
+            </div>
+            <span class="score-label extrovert-label">Ekstrovert</span>
+          </div>
+          <div class="score-numbers">
+            <span id="num-i" class="num-i">0 Poin</span>
+            <span class="score-sep">vs</span>
+            <span id="num-e" class="num-e">0 Poin</span>
+          </div>
+        </div>
+
+        <div class="duo-sub-info" id="kemudi-tambahan"></div>
+      </section>
+
+      <!-- Kartu Kanan: Mesin Berpikir STIFIn (Geometri) -->
+      <section class="card glass card-duo" id="card-mesin">
+        <div class="card-duo-header">
+          <span class="card-duo-tag tag-mesin">🔷 Mesin Berpikir STIFIn</span>
+          <div class="geo-mini-badge" id="geo-mini-badge">MQ</div>
+        </div>
+        <div class="geo-duo-top">
+          <div class="geo-result-img-wrap">
+            <img id="geo-result-img" src="" alt="Geometri" class="geo-result-img" />
+          </div>
+          <div class="geo-duo-title-wrap">
+            <h2 class="duo-title geo-title-gradient" id="geo-result-label">—</h2>
+            <div class="geo-duo-sub" id="geo-result-desc">—</div>
+          </div>
+        </div>
+        
+        <!-- Info Atribut Mesin -->
+        <div class="mesin-attr-grid">
+          <div class="attr-item">
+            <span class="attr-label">🧠 Belahan Otak:</span>
+            <span class="attr-val" id="attr-otak">—</span>
+          </div>
+          <div class="attr-item">
+            <span class="attr-label">✨ Jenis Kecerdasan:</span>
+            <span class="attr-val" id="attr-kecerdasan">—</span>
+          </div>
+          <div class="attr-item">
+            <span class="attr-label">🌿 Unsur Alam:</span>
+            <span class="attr-val" id="attr-unsur">—</span>
+          </div>
+          <div class="attr-item">
+            <span class="attr-label">🎯 Peran Kunci:</span>
+            <span class="attr-val" id="attr-peran">—</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ─── Ulasan Analisis Menyeluruh Kepribadian STIFIn ─── -->
+    <section class="card glass ulasan-section" id="section-ulasan-menyeluruh">
+      <div class="ulasan-header">
+        <div class="ulasan-badge">📑 ULASAN LENGKAP & KOMPREHENSIF</div>
+        <h2 class="section-title-large">Analisis Potensi Kepribadian STIFIn Anda</h2>
+        <p class="section-desc">
+          Sintesis mendalam berdasarkan sinergi mesin berpikir dan kemudi kecerdasan Anda:
+          karakteristik umum, strategi belajar, jalur karir, potensi bisnis, dan kemitraan ideal.
+        </p>
+      </div>
+
+      <div class="ulasan-grid-cards">
+        <!-- 1. Ulasan Umum -->
+        <article class="ulasan-card-item">
+          <div class="ulasan-card-header">
+            <span class="icon-circle icon-umum">🌐</span>
+            <div>
+              <h3 class="ulasan-card-title">1. Ulasan Umum Kepribadian</h3>
+              <span class="ulasan-card-sub">Karakteristik dasar, cara kerja energi, & potensi genetik</span>
+            </div>
+          </div>
+          <div class="ulasan-card-body" id="ulasan-umum-content">
+            <!-- Diisi JavaScript -->
+          </div>
+        </article>
+
+        <!-- 2. Cara Belajar yang Sesuai -->
+        <article class="ulasan-card-item">
+          <div class="ulasan-card-header">
+            <span class="icon-circle icon-belajar">📚</span>
+            <div>
+              <h3 class="ulasan-card-title">2. Cara Belajar yang Sesuai</h3>
+              <span class="ulasan-card-sub">Modalitas belajar, lingkungan optimal, & pemicu motivasi</span>
+            </div>
+          </div>
+          <div class="ulasan-card-body" id="ulasan-belajar-content">
+            <!-- Diisi JavaScript -->
+          </div>
+        </article>
+
+        <!-- 3. Profesi yang Sesuai -->
+        <article class="ulasan-card-item">
+          <div class="ulasan-card-header">
+            <span class="icon-circle icon-profesi">💼</span>
+            <div>
+              <h3 class="ulasan-card-title">3. Profesi yang Sesuai</h3>
+              <span class="ulasan-card-sub">Jalur karir, spesialisasi keahlian, & posisi strategis</span>
+            </div>
+          </div>
+          <div class="ulasan-card-body" id="ulasan-profesi-content">
+            <!-- Diisi JavaScript -->
+          </div>
+        </article>
+
+        <!-- 4. Usaha Bisnis yang Sesuai -->
+        <article class="ulasan-card-item">
+          <div class="ulasan-card-header">
+            <span class="icon-circle icon-bisnis">🚀</span>
+            <div>
+              <h3 class="ulasan-card-title">4. Usaha Bisnis yang Sesuai</h3>
+              <span class="ulasan-card-sub">Sektor bisnis potensial, peran wirausaha, & formula omzet</span>
+            </div>
+          </div>
+          <div class="ulasan-card-body" id="ulasan-bisnis-content">
+            <!-- Diisi JavaScript -->
+          </div>
+        </article>
+
+        <!-- 5. Rekan Bisnis yang Cocok -->
+        <article class="ulasan-card-item ulasan-card-highlight">
+          <div class="ulasan-card-header">
+            <span class="icon-circle icon-mitra">🤝</span>
+            <div>
+              <h3 class="ulasan-card-title">5. Rekan Bisnis yang Cocok</h3>
+              <span class="ulasan-card-sub">Sirkulasi hubungan STIFIn, mitra komplementer, & kunci sinergi</span>
+            </div>
+          </div>
+          <div class="ulasan-card-body" id="ulasan-rekan-content">
+            <!-- Diisi JavaScript -->
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ─── Rekap Jawaban ─── -->
+    <section class="card glass" id="section-rekap">
+      <h2 class="section-title">📋 Rekap Jawaban</h2>
+      <div id="rekap-list" class="rekap-list"></div>
+    </section>
+
+    <!-- ─── Chatbot RAG ─── -->
+    <section class="card glass chatbot-section" id="section-chatbot">
+      <h2 class="section-title">💬 Tanya Asisten Psikologi AI</h2>
+      <p class="section-desc">
+        Asisten ini menjawab berdasarkan buku rujukan STIFIn Personality.
+        Tanyakan apa saja seputar kepribadian Anda.
+      </p>
+      <div class="chat-window" id="chat-window">
+        <div class="chat-row bot-row">
+          <div class="chat-avatar bot-avatar">🤖</div>
+          <div class="chat-bubble bot">
+            Halo! Saya Asisten Psikologi berbasis AI. Silakan tanyakan apa saja
+            seputar kepribadian STIFIn, tipe Anda, atau cara berkembang. 😊
+          </div>
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input
+          type="text"
+          id="chat-input"
+          class="text-input chat-input"
+          placeholder="Tulis pertanyaan Anda…"
+          onkeydown="handleChatKey(event)"
+          autocomplete="off"
+        />
+        <button class="btn-send" id="btn-send" onclick="kirimChat()">
+          ➤
+        </button>
+      </div>
+    </section>
+
+    <!-- Tombol Ulangi -->
+    <div class="submit-wrapper">
+      <a href="/" class="btn-ulang">↩ Ulangi Tes</a>
+    </div>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="/static/js/hasil.js"></script>
+</body>
+</html>
