@@ -1,4 +1,4 @@
-﻿---
+---
 title: STIFIn Personality AI
 emoji: 🧠
 colorFrom: indigo

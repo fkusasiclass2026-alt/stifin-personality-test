@@ -1,4 +1,4 @@
-﻿"""
+"""
 ingest.py - Ingest STIFIn documents (PDF Books & YouTube Video Transcripts) into FAISS Vector Database
 Fitur cerdas:
 - Auto-resume (melanjutkan dari chunk terakhir yang belum tersimpan)

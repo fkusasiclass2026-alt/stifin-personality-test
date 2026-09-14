@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 
 # Tambahkan root path ke sys.path
