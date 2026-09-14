@@ -7,3 +7,5 @@
 .claude/
 token.json
 credentials.json
+cloudflared.exe
+*.bat

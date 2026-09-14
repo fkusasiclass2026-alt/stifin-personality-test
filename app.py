@@ -17,11 +17,15 @@ from google import genai
 
 load_dotenv()
 
-app = Flask(__name__)
-
 BASE_DIR          = os.path.dirname(os.path.abspath(__file__))
+app = Flask(
+    __name__,
+    template_folder=os.path.join(BASE_DIR, "templates"),
+    static_folder=os.path.join(BASE_DIR, "static")
+)
+
 GEMINI_API_KEY    = os.getenv("GEMINI_API_KEY")
-GEMINI_MODEL      = os.getenv("GEMINI_MODEL", "gemini-3.1-flash-lite")
+GEMINI_MODEL      = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite")
 SHEETS_CREDS_FILE = os.path.join(BASE_DIR, os.getenv("GOOGLE_SHEETS_CREDS_JSON", "credentials.json"))
 TOKEN_FILE        = os.path.join(BASE_DIR, "token.json")
 SPREADSHEET_NAME  = os.getenv("SPREADSHEET_NAME", "STIFIn_Data")
