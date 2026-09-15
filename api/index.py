@@ -13,9 +13,7 @@ class VercelPathMiddleware:
         self.wsgi_app = wsgi_app
 
     def __call__(self, environ, start_response):
-        # Check debug request
-        raw_uri = environ.get('RAW_URI', '') or environ.get('REQUEST_URI', '')
-        if 'debug-env' in raw_uri or 'debug-env' in environ.get('PATH_INFO', ''):
+        if 'debug' in environ.get('QUERY_STRING', ''):
             start_response('200 OK', [('Content-Type', 'application/json')])
             safe_env = {k: str(v) for k, v in environ.items() if not any(x in k.upper() for x in ['KEY', 'SECRET', 'TOKEN', 'CREDS', 'PASS'])}
             return [json.dumps(safe_env, indent=2).encode('utf-8')]
