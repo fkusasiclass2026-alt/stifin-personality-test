@@ -1,8 +1,24 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index?__vercel_path__=/$1"
+      "source": "/hasil",
+      "destination": "/api/index?__vercel_path__=/hasil"
+    },
+    {
+      "source": "/api/simpan",
+      "destination": "/api/index?__vercel_path__=/api/simpan"
+    },
+    {
+      "source": "/api/chat",
+      "destination": "/api/index?__vercel_path__=/api/chat"
+    },
+    {
+      "source": "/",
+      "destination": "/api/index?__vercel_path__=/"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/api/index?__vercel_path__=/:path*"
     }
   ]
 }

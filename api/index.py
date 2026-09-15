@@ -25,7 +25,12 @@ class VercelPathMiddleware:
                 if len(target_path) > 1 and target_path.endswith('/'):
                     target_path = target_path[:-1]
                 environ['PATH_INFO'] = target_path
+                environ['SCRIPT_NAME'] = ''
                 environ['QUERY_STRING'] = urlencode(params, doseq=True)
+        elif environ.get('PATH_INFO') in ('/api/index', '/api/index.py', '/api'):
+            environ['PATH_INFO'] = '/'
+            environ['SCRIPT_NAME'] = ''
+            
         return self.wsgi_app(environ, start_response)
 
 app = VercelPathMiddleware(flask_app)
