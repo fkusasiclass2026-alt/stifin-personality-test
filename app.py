@@ -151,6 +151,8 @@ def get_genai_client():
 
 # ─── Routes ──────────────────────────────────────────────────────────────────
 @app.route("/")
+@app.route("/api/index")
+@app.route("/api")
 def index():
     return render_template("index.html")
 
